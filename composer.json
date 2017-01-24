@@ -1,0 +1,10 @@
+{
+    "name": "ikkez/f3-middleware",
+    "description": "A middleware router plugin for PHP Fat-Free Framework",
+    "keywords": ["F3","fatfree","router","middleware"],
+    "homepage": "https://github.com/ikkez/f3-middleware",
+    "license": "GPL-3.0",
+    "autoload": {
+        "classmap": ["lib/"]
+    }
+}

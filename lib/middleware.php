@@ -10,7 +10,7 @@
  *	Copyright (c) 2017 ~ ikkez
  *	Christian Knuth <ikkez0n3@gmail.com>
  *
- *	@version: 1.1.1
+ *	@version: 1.1.2-dev
  *	@date: 24.01.2017
  *
  **/
@@ -113,6 +113,8 @@ class Middleware extends \Prefab {
 						!class_exists($match[1]))
 						$this->f3->error(500,'PreRoute handler not found');
 				}
+				if (!$this->f3['RAW'] && !$this->f3['BODY'])
+					$this->f3['BODY']=file_get_contents('php://input');
 				// Call route handler
 				return $this->f3->call($handler,array($this->f3,$args,$alias),
 					'beforeroute,afterroute') !== FALSE;

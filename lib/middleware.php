@@ -94,7 +94,7 @@ class Middleware extends \Prefab {
 				isset($route[$this->f3->VERB])) {
 				if ($this->f3['VERB']=='GET' &&
 					preg_match('/.+\/$/',$this->f3['PATH']))
-					$this->reroute(substr($this->f3['PATH'],0,-1).
+					$this->f3->reroute(substr($this->f3['PATH'],0,-1).
 						($this->f3['QUERY']?('?'.$this->f3['QUERY']):''));
 				$handler=$route[$this->f3->VERB][0];
 				$alias=$route[$this->f3->VERB][3];

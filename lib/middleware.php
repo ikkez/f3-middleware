@@ -10,8 +10,8 @@
  *	Copyright (c) 2017 ~ ikkez
  *	Christian Knuth <ikkez0n3@gmail.com>
  *
- *	@version: 1.1.2-dev
- *	@date: 24.01.2017
+ *	@version: 1.1.2
+ *	@date: 23.04.2017
  *
  **/
 

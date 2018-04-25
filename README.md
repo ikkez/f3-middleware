@@ -1,5 +1,5 @@
 
-![Middleware](https://dl.dropboxusercontent.com/u/3077539/_linked/f3-middleware.png)
+![Middleware](https://ikkez.de/linked/f3-middleware.png)
 
 ## Middleware Router
 

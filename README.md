@@ -62,8 +62,13 @@ if ($mw->run('limit')) {
 }
 ```
 
+## Notice
+
+Although you can probably use the middleware router as a completely stand alone router, it is not a full replacement of the frameworks integrated router.
+The middleware router does not include handling of route caching, header management or automated CORS support, so use it as an additional component for settings, checks and workload before/after the main routing cycle.
+
 ## License
 
 You are allowed to use this plugin under the terms of the GNU General Public License version 3 or later.
 
-Copyright (C) 2017 Christian Knuth (ikkez)
+Copyright (C) 2019 Christian Knuth (ikkez)

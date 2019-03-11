@@ -7,11 +7,11 @@
  *	compliance with the license. Any of the license terms and conditions
  *	can be waived if you get permission from the copyright holder.
  *
- *	Copyright (c) 2017 ~ ikkez
+ *	Copyright (c) 2019 ~ ikkez
  *	Christian Knuth <ikkez0n3@gmail.com>
  *
- *	@version: 1.1.2
- *	@date: 23.04.2017
+ *	@version: 1.1.3
+ *	@date: 11.03.2019
  *
  **/
 
@@ -37,7 +37,8 @@ class Middleware extends \Prefab {
 		$bak = $this->f3->ROUTES;
 		$this->f3->ROUTES=array();
 		$this->f3->route($pattern,$handler);
-		$this->routes[$event] = $this->f3->ROUTES;
+		$this->routes[$event] = (isset($this->routes[$event]))
+			? $this->f3->extend('ROUTES',$this->routes[$event]) : $this->f3->ROUTES;
 		$this->f3->ROUTES=$bak;
 	}
 
